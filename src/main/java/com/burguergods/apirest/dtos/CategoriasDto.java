@@ -4,8 +4,10 @@ import javax.validation.constraints.NotBlank;
 
 public class CategoriasDto {
     
-    @NotBlank
+    @NotBlank(message = "{nome.not.blank}")
     private String nome;
+
+    /* Getters And Setters */
 
     public String getNome() {
         return nome;

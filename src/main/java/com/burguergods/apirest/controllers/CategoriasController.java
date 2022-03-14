@@ -31,7 +31,7 @@ public class CategoriasController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> salvarCategorias(@RequestBody @Valid CategoriasDto categoriasDto) {  
+    public ResponseEntity<Object> salvarCategoria(@RequestBody @Valid CategoriasDto categoriasDto) {  
 
         var categorias = new Categorias();
         BeanUtils.copyProperties(categoriasDto, categorias);
@@ -63,7 +63,7 @@ public class CategoriasController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Object> atualizarCategorias(@PathVariable(value = "id") Long id, @RequestBody @Valid CategoriasDto categoriasDto) {
+    public ResponseEntity<Object> atualizarCategoria(@PathVariable(value = "id") Long id, @RequestBody @Valid CategoriasDto categoriasDto) {
 
         Optional<Categorias> categoriasOptional = categoriasService.listarId(id);
 
